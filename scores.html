@@ -1,0 +1,69 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>成绩折线图</title>
+    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;}</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.5/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.6/data-set.min.js"></script>
+<script>
+  const data = [
+    { year: '新生课', value: 87 },
+    { year: '计算机程序设计基础（I）（C、C++）', value: 90 },
+    { year: '通信工程导论', value: 84 },
+    { year: '高等数学A2（一）', value: 91 },
+    { year: '大学英语（一）', value: 82 },
+    { year: '思想道德修养与法律基础', value: 79 },
+    { year: '军事理论课', value: 86 },
+    { year: '体育（一）', value: 82 },
+    { year: '数据结构与算法', value: 87 },
+    { year: '电路理论B', value: 80 },
+    { year: '高等数学A2（二）', value: 88 },
+    { year: '线性代数', value: 90 },
+    { year: '大学物理C1（一）', value: 76 },
+    { year: '大学物理实验B', value: 89 },
+    { year: '大学英语（二）', value: 83 },
+    { year: '写作', value: 86 },
+    { year: '大学生心理健康教育', value: 78 },
+    { year: '体育（二）', value: 90 },
+    { year: '信号与系统', value: 93 },
+    { year: '通信工程应用数学', value: 88 },
+    { year: 'Matlab高级编程与工程应用', value: 94 },
+    { year: '模拟电子技术A', value: 91 },
+    { year: '数字电子技术A', value: 89 },
+    { year: '电子政务与政府管理创新', value: 97 },
+    { year: '创业基础（大学生创业实训课）', value: 89 },
+    { year: '概率论与数理统计', value: 89 },
+    { year: '高级英语系列选修', value: 75 },
+    { year: '中国近现代史纲要', value: 88 },
+    { year: '体育（三）', value: 84 }
+ ];
+  const chart = new G2.Chart({
+    container: 'mountNode',
+    forceFit: true,
+    height: window.innerHeight
+  });
+  chart.source(data);
+  chart.scale('value', {
+    min: 0
+  });
+  chart.scale('year', {
+    range: [ 0 , 1 ]
+  });
+  chart.tooltip({
+    crosshairs: {
+      type: 'line'
+    }
+  });
+  chart.line().position('year*value');
+  chart.point().position('year*value').size(4).shape('circle').style({
+    stroke: '#fff',
+    lineWidth: 1
+  });
+  chart.render();
+</script>
+</body>
+</html>
