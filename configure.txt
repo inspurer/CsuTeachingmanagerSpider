@@ -1,2 +1,0 @@
-account=0905160212
-password=@CSUxiaotao1998
