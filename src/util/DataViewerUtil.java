@@ -1,7 +1,8 @@
+package util;
 /**
  * 原创声明:csu_xiaotao@163.com
  */
-package csu_jwxt;
+
 
 /**
  * Class Declaration
@@ -9,7 +10,7 @@ package csu_jwxt;
  * @author csu_xiaotao <a href = "https://user.qzone.qq.com/2391527690">月小水长</a>
  *         上午8:56:19 2018年4月22日
  */
-public class DataViewer {
+public class DataViewerUtil {
 	private final String front = "<head>\r\n" + "    <meta charset=\"UTF-8\">\r\n"
 			+ "    <meta name=\"viewport\" content=\"width=device-width,height=device-height\">\r\n"
 			+ "    <title>成绩折线图</title>\r\n"
@@ -29,7 +30,7 @@ public class DataViewer {
 			+ "    lineWidth: 1\r\n" + "  });\r\n" + "  chart.render();\r\n" + "</script>\r\n" + "</body>\r\n"
 			+ "</html>\r\n";
 	private String content;
-	public DataViewer(String [] names,String [] scores) {
+	public DataViewerUtil(String [] names,String [] scores) {
 	    StringBuffer sb = new StringBuffer();
 	    for(int i = 0; i<names.length; i++) {
 	    	try {

@@ -1,7 +1,7 @@
 /**
  * 原创声明:csu_xiaotao@163.com
  */
-package csu_jwxt;
+
 
 import java.io.FileReader;
 import java.util.Properties;
@@ -9,6 +9,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import javax.swing.JOptionPane;
+
+import util.Constant;
+import util.FileUtil;
+import util.NetUtil;
+import view.ScoresUI;
 
 /**
  * Class Declaration

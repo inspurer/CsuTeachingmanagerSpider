@@ -1,7 +1,8 @@
+package util;
 /**
  * 原创声明:csu_xiaotao@163.com
  */
-package csu_jwxt;
+
 
 /**
  * Class Declaration

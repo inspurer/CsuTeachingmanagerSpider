@@ -1,4 +1,5 @@
-package csu_jwxt;
+package view;
+
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +20,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import util.Constant;
+import util.FileUtil;
 
 /**
  * 

@@ -1,13 +1,19 @@
+package view;
 /**
  * 原创声明:csu_xiaotao@163.com
  */
-package csu_jwxt;
+
 
 import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+
+import util.Constant;
+import util.DataViewerUtil;
+import util.FileUtil;
+import util.NetUtil;
 
 /**
  * Class Declaration
@@ -35,7 +41,7 @@ public class ScoresUI {
 		}
 		jta.setText(sb.toString());
 		jta.setFont(new Font("楷体", Font.BOLD, 14));
-		new DataViewer(names, scores).ShowView();
+		new DataViewerUtil(names, scores).ShowView();
 		
 		//把当前成绩个数写进文件,方便比对
 		FileUtil.writefile(String.valueOf(names.length), Constant.score_size);
